@@ -1,0 +1,55 @@
+<html>
+<head>
+
+  <style>
+    body {
+      font-family: Verdana, Arial, Helvetica, sans-serif;
+    }
+
+    .wrapper {
+      padding: 16px;
+    }
+
+    #input {
+      display: none;
+    }
+
+    .dropArea {
+      width: 540px;
+      height: 400px;
+
+      background-color: #F2F2F2;
+      border: 6px dashed #E0E0E0;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      color: #888888;
+
+      cursor: pointer;
+    }
+
+    .hover {
+      border: 6px dashed #888888;
+    }
+  </style>
+
+</head>
+<body>
+
+  <div class="wrapper">
+    <h1>Futr.io</h1>
+    <input type="file" id="input" onchange="handleFiles(this.files)" />
+    <div class="dropArea" id="dropArea">
+      Click or drop files here to upload to IPFS
+    </div>
+
+    <div class="results" id="results">
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/ipfs-api/dist/index.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
